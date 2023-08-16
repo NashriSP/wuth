@@ -5,8 +5,8 @@ POST  http://localhost:6060/in/login
 Content-Type: application/json
 
 {
-    "email":"ss@sapi.com",
-    "password":"sapi"
+    "email":"nashri@sapi.com",
+    "password":"nashri"
 }
 ###
 POST  http://localhost:6060/in/register
@@ -17,3 +17,7 @@ Content-Type: application/json
     "email":"nashri@sapi.com",
     "password":"nashri"
 }
+###
+GET  http://localhost:6060/pf/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.bmFzaHJp.ML-nc3hlFpACj9X7R6MslRUEI1biAv5xZhuUUEv2rZs
+

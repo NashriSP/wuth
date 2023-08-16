@@ -17,8 +17,8 @@ router.post('/login', async (req,res) => {
         } else{
             try{
                 if(await bcrypt.compare(req.body.password,userDB.password)){
-                    // accessToken = jws.sign(userDB,process.env.token)
-                    res.json(`Welcome user ${userDB.username}`);
+                    const accessToken = jws.sign(userDB.username,process.env.token)
+                    res.json({'user': userDB.username, 'token': accessToken});
                 }else{
                     res.json('wrong password');
                 }
